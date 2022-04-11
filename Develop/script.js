@@ -10,13 +10,18 @@ function generatePassword() {
 
   var passwordSize = window.prompt("Enter size of password (8 - 128 characters)");
 
-  if (passwordSize < 8) {
+  /*if (passwordSize < 8) {
     alert("The password must be at least 8 characters long!")
     return null;
   }
   if (passwordSize > 129) {
     alert("The password must be at most 128 characters long!")
     return null;
+  }*/
+
+  if (passwordSize < 8 && passwordSize > 129) {
+    alert("The password must meet the character length requirements!")
+    generatePassword();
   }
 
   console.log(passwordSize)
@@ -50,25 +55,6 @@ function generatePassword() {
 
   return null;
 
-  /*if (passwordSize.length < 8 ) {
-    alert("The password must be at least 8 characters long!")
-    return null;
-  }*/
-
-  
-
-
-
-  
-  /*if (passwordSize.length >= minPasswordLength && passwordSize.length <= maxPasswordLength) {
-        window.prompt("Do you want your password to include uppercase letters, lowercase letters, numbers, and special characters?");
-        return "sdfjnrfnb";
-      }
-  else {
-        alert("Please input between " +minPasswordLength+ " and " +maxPasswordLength+ " characters");
-        return null;
-      }
-  */
   
 }
 
