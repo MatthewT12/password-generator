@@ -19,7 +19,7 @@ function generatePassword() {
     return null;
   }*/
 
-  if (passwordSize < 8 && passwordSize > 129) {
+  if (passwordSize < 8 || passwordSize > 129) {
     alert("The password must meet the character length requirements!")
     generatePassword();
   }
@@ -49,6 +49,11 @@ function generatePassword() {
 
   var specialCharactersArray = ["!", "@", "#", "$", "%", "^", "&", "*", "?", "/", ",", ".", "<", ">", "-", "_", "+", "="];
   console.log(specialCharactersArray)
+
+  /*switch (isLowerCase, isUpperCase, isNumbers, isSpecialCharacters) {
+    default: window.alert("You need to select at least one requirement!");
+    
+  }*/
 
   var passwordArray = [lowerCaseArray, upperCaseArray, numbersArray, specialCharactersArray];
   console.log(passwordArray)
