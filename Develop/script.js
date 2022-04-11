@@ -10,33 +10,50 @@ function generatePassword() {
 
   var passwordSize = window.prompt("Enter size of password (8 - 128 characters)");
 
-  var minPasswordLength = 8;
-  var maxPasswordLength = 128;
-
-  console.log(passwordSize)
-
-  var isLowercase = window.confirm("Do you want your password to include lowercase?")
-
-  console.log(isLowercase)
-
-  var isUpperCase = window.confirm("Do you want your password to include uppercase?")
-
-  console.log(isUpperCase)
-
-  var isNumbers = window.confirm("Do you want your password to include numbers?")
-
-  console.log(isNumbers)
-
-  var isSpecialCharacters = window.confirm("Do you want your password to include special characters?")
-
-  console.log(isSpecialCharacters)
-
-  //return "fbgberfb";
-
-  if (passwordSize.length < 8 ) {
+  if (passwordSize < 8) {
     alert("The password must be at least 8 characters long!")
     return null;
   }
+  if (passwordSize > 129) {
+    alert("The password must be at most 128 characters long!")
+    return null;
+  }
+
+  console.log(passwordSize)
+
+  var isLowerCase = window.confirm("Do you want your password to include lowercase?")
+  console.log(isLowerCase)
+
+  var lowerCaseArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+  console.log(lowerCaseArray)
+
+  var isUpperCase = window.confirm("Do you want your password to include uppercase?")
+  console.log(isUpperCase)
+
+  var upperCaseArray = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+  console.log(upperCaseArray)
+
+  var isNumbers = window.confirm("Do you want your password to include numbers?")
+  console.log(isNumbers)
+
+  var numbersArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+  console.log(numbersArray)
+
+  var isSpecialCharacters = window.confirm("Do you want your password to include special characters?")
+  console.log(isSpecialCharacters)
+
+  var specialCharactersArray = ["!", "@", "#", "$", "%", "^", "&", "*", "?", "/", ",", ".", "<", ">", "-", "_", "+", "="];
+  console.log(specialCharactersArray)
+
+  var passwordArray = [lowerCaseArray, upperCaseArray, numbersArray, specialCharactersArray];
+  console.log(passwordArray)
+
+  return null;
+
+  /*if (passwordSize.length < 8 ) {
+    alert("The password must be at least 8 characters long!")
+    return null;
+  }*/
 
   
 
