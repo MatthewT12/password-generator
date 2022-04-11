@@ -9,8 +9,9 @@ function generatePassword() {
   //TODO: return password for use in other functions
 
   var passwordSize = window.prompt("Enter size of password (8 - 128 characters)");
-  minPasswordLength = 8;
-  maxPasswordLength = 128;
+
+  var minPasswordLength = 8;
+  var maxPasswordLength = 128;
 
   console.log(passwordSize)
 
@@ -30,7 +31,14 @@ function generatePassword() {
 
   console.log(isSpecialCharacters)
 
-  return "fbgberfb";
+  //return "fbgberfb";
+
+  if (passwordSize.length < 8 ) {
+    alert("The password must be at least 8 characters long!")
+    return null;
+  }
+
+  
 
 
 
@@ -46,6 +54,7 @@ function generatePassword() {
   */
   
 }
+
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
