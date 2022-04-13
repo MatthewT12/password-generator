@@ -50,6 +50,12 @@ function generatePassword() {
   var specialCharactersArray = ["!", "@", "#", "$", "%", "^", "&", "*", "?", "/", ",", ".", "<", ">", "-", "_", "+", "="];
   console.log(specialCharactersArray)
 
+  if (!isLowerCase && !isUpperCase && !isNumbers && !isSpecialCharacters) {
+    alert("You need to select at least one requirement!");
+    generatePassword(); 
+  }
+  
+  
   /*switch (isLowerCase, isUpperCase, isNumbers, isSpecialCharacters) {
     default: window.alert("You need to select at least one requirement!");
     
@@ -61,8 +67,9 @@ function generatePassword() {
   return null;
 
   
-}
 
+  
+}
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
