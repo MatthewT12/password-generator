@@ -23,37 +23,54 @@ function generatePassword() {
     alert("The password must meet the character length requirements!")
     generatePassword();
   }
-
   console.log(passwordSize)
+
+  var userInputArray = [];
 
   var isLowerCase = window.confirm("Do you want your password to include lowercase?")
   console.log(isLowerCase)
 
-  var lowerCaseArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-  console.log(lowerCaseArray)
+  if (isLowerCase === true) {
+    var lowerCaseArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+    var newArray = lowerCaseArray.concat(userInputArray);
+    console.log(newArray)
+    //console.log(lowerCaseArray)
+  }
 
   var isUpperCase = window.confirm("Do you want your password to include uppercase?")
   console.log(isUpperCase)
 
-  var upperCaseArray = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-  console.log(upperCaseArray)
+  if (isUpperCase === true) {
+    var upperCaseArray = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+    var newArray = upperCaseArray.concat(userInputArray);
+    console.log(newArray)
+    //console.log(upperCaseArray)
+  }
 
   var isNumbers = window.confirm("Do you want your password to include numbers?")
   console.log(isNumbers)
 
-  var numbersArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-  console.log(numbersArray)
+  if (isNumbers === true) {
+    var numbersArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+    var newArray = numbersArray.concat(userInputArray);
+    console.log(newArray)
+    //console.log(numbersArray)
+  }
 
   var isSpecialCharacters = window.confirm("Do you want your password to include special characters?")
   console.log(isSpecialCharacters)
 
-  var specialCharactersArray = ["!", "@", "#", "$", "%", "^", "&", "*", "?", "/", ",", ".", "<", ">", "-", "_", "+", "="];
-  console.log(specialCharactersArray)
+  if (isSpecialCharacters === true) {
+    var specialCharactersArray = ["!", "@", "#", "$", "%", "^", "&", "*", "?", "/", ",", ".", "<", ">", "-", "_", "+", "="];
+    var newArray = specialCharactersArray.concat(userInputArray);
+    console.log(newArray)
+    //console.log(specialCharactersArray)
+  }
 
-  if (!isLowerCase && !isUpperCase && !isNumbers && !isSpecialCharacters) {
+  /*if (!isLowerCase && !isUpperCase && !isNumbers && !isSpecialCharacters) {
     alert("You need to select at least one requirement!");
     generatePassword(); 
-  }
+  }*/
   
   
   /*switch (isLowerCase, isUpperCase, isNumbers, isSpecialCharacters) {
@@ -61,13 +78,21 @@ function generatePassword() {
     
   }*/
 
+  
   var passwordArray = [lowerCaseArray, upperCaseArray, numbersArray, specialCharactersArray];
   console.log(passwordArray)
 
-  return null;
-
+  for ( var i = 0; i < passwordSize; i++) {
+    Math.floor(Math.random() * passwordArray);
+    console.log(passwordArray)
+  }
   
 
+  if (!isLowerCase && !isUpperCase && !isNumbers && !isSpecialCharacters) {
+    alert("You need to select at least one requirement!");
+    generatePassword();
+  }
+  
   
 }
 
