@@ -71,6 +71,11 @@ function generatePassword() {
     //console.log(specialCharactersArray)
   }
 
+  if (!isLowerCase && !isUpperCase && !isNumbers && !isSpecialCharacters) {
+    alert("You need to select at least one requirement!");
+    generatePassword();
+  }
+
   /*if (!isLowerCase && !isUpperCase && !isNumbers && !isSpecialCharacters) {
     alert("You need to select at least one requirement!");
     generatePassword(); 
@@ -86,16 +91,16 @@ function generatePassword() {
   var passwordArray = [lowerCaseArray, upperCaseArray, numbersArray, specialCharactersArray];
   console.log(passwordArray)
 
+  var text = "";
+
   for ( var i = 0; i < passwordSize; i++) {
     var password = userInputArray[Math.floor(Math.random() * userInputArray.length)];
     console.log(password)
+    text + password;
   }
   
+  return text;
 
-  if (!isLowerCase && !isUpperCase && !isNumbers && !isSpecialCharacters) {
-    alert("You need to select at least one requirement!");
-    generatePassword();
-  }
   
   
 }
