@@ -96,7 +96,7 @@ function generatePassword() {
   for ( var i = 0; i < passwordSize; i++) {
     var password = userInputArray[Math.floor(Math.random() * userInputArray.length)];
     console.log(password)
-    text + password;
+    text += password;
   }
   
   return text;
