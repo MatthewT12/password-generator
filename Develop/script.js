@@ -24,6 +24,10 @@ function generatePassword() {
     generatePassword();
   }
   console.log(passwordSize)
+  /*if (passwordSize = "a", "b", "c") {
+    alert("Cannot use letters for password length!")
+    generatePassword();
+  }*/
 
   var userInputArray = [];
 
@@ -32,7 +36,7 @@ function generatePassword() {
 
   if (isLowerCase === true) {
     var lowerCaseArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-    var userInputArray = lowerCaseArray.concat(userInputArray);
+    userInputArray = lowerCaseArray.concat(userInputArray);
     console.log(userInputArray)
     //console.log(lowerCaseArray)
   }
@@ -42,7 +46,7 @@ function generatePassword() {
 
   if (isUpperCase === true) {
     var upperCaseArray = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-    var userInputArray = upperCaseArray.concat(userInputArray);
+    userInputArray = upperCaseArray.concat(userInputArray);
     console.log(userInputArray)
     //console.log(upperCaseArray)
   }
@@ -52,8 +56,8 @@ function generatePassword() {
 
   if (isNumbers === true) {
     var numbersArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-    var newArray = numbersArray.concat(userInputArray);
-    console.log(newArray)
+    userInputArray = numbersArray.concat(userInputArray);
+    console.log(userInputArray)
     //console.log(numbersArray)
   }
 
@@ -62,7 +66,7 @@ function generatePassword() {
 
   if (isSpecialCharacters === true) {
     var specialCharactersArray = ["!", "@", "#", "$", "%", "^", "&", "*", "?", "/", ",", ".", "<", ">", "-", "_", "+", "="];
-    var userInputArray = specialCharactersArray.concat(userInputArray);
+    userInputArray = specialCharactersArray.concat(userInputArray);
     console.log(userInputArray)
     //console.log(specialCharactersArray)
   }
@@ -83,8 +87,8 @@ function generatePassword() {
   console.log(passwordArray)
 
   for ( var i = 0; i < passwordSize; i++) {
-    Math.floor(Math.random() * userInputArray);
-    console.log(userInputArray)
+    var password = userInputArray[Math.floor(Math.random() * userInputArray.length)];
+    console.log(password)
   }
   
 
