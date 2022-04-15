@@ -32,8 +32,8 @@ function generatePassword() {
 
   if (isLowerCase === true) {
     var lowerCaseArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-    var newArray = lowerCaseArray.concat(userInputArray);
-    console.log(newArray)
+    var userInputArray = lowerCaseArray.concat(userInputArray);
+    console.log(userInputArray)
     //console.log(lowerCaseArray)
   }
 
@@ -42,8 +42,8 @@ function generatePassword() {
 
   if (isUpperCase === true) {
     var upperCaseArray = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
-    var newArray = upperCaseArray.concat(userInputArray);
-    console.log(newArray)
+    var userInputArray = upperCaseArray.concat(userInputArray);
+    console.log(userInputArray)
     //console.log(upperCaseArray)
   }
 
@@ -62,8 +62,8 @@ function generatePassword() {
 
   if (isSpecialCharacters === true) {
     var specialCharactersArray = ["!", "@", "#", "$", "%", "^", "&", "*", "?", "/", ",", ".", "<", ">", "-", "_", "+", "="];
-    var newArray = specialCharactersArray.concat(userInputArray);
-    console.log(newArray)
+    var userInputArray = specialCharactersArray.concat(userInputArray);
+    console.log(userInputArray)
     //console.log(specialCharactersArray)
   }
 
@@ -83,8 +83,8 @@ function generatePassword() {
   console.log(passwordArray)
 
   for ( var i = 0; i < passwordSize; i++) {
-    Math.floor(Math.random() * passwordArray);
-    console.log(passwordArray)
+    Math.floor(Math.random() * userInputArray);
+    console.log(userInputArray)
   }
   
 
