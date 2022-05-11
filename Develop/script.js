@@ -56,7 +56,7 @@ function generatePassword() {
 
   if (isNumbers === true) {
     var numbersArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-    userInputArray = numbersArray.concat(userInputArray);
+    userInputArray = numbersArray.concat(userInputArray); 
     console.log(userInputArray)
     //console.log(numbersArray)
   }
